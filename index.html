@@ -77,15 +77,18 @@
     <div id="outputText" class="output"></div>
 
     <script>
-        function convertText() {
-            const text = document.getElementById("inputText").value;
-            const font = document.getElementById("fontSelect").value;
-            const output = document.getElementById("outputText");
+    function convertText() {
+        const text = document.getElementById("inputText").value;
+        const font = document.getElementById("fontSelect").value;
+        const output = document.getElementById("outputText");
 
-            output.textContent = text;
-            output.style.fontFamily = font;
-        }
-    </script>
+        // Quote the font name properly
+        output.textContent = text;
+        output.style.fontFamily = `'${font}', sans-serif`;
+    }
+</script>
+
 
 </body>
 </html>
+
